@@ -1,0 +1,32 @@
+{{define "main"}}
+<div class="main post-list">
+    {{$paginator := .Paginate (where site.RegularPages "Type" "posts")}}
+
+    <section>
+        {{range $paginator.Pages}}
+        <div class="post">
+            <a href="{{.RelPermalink}}">
+                <h3>{{.Title}}</h3>
+            </a>
+            {{if site.Params.card.date}}
+            {{with .Date}}
+            <div>{{dateFormat "2006-01-02" .}}</div>
+            {{end}}
+            {{end}}
+            <div class="summary">{{.Summary}}</div>
+
+            <div class="read-more">
+                <a href="{{.RelPermalink}}">
+                    Read More →
+                </a>
+            </div>
+        </div>
+        <hr>
+        {{end}}
+    </section>
+
+    <div class="paginator">
+        {{template "_internal/pagination.html" .}}
+    </div>
+</div>
+{{end}}

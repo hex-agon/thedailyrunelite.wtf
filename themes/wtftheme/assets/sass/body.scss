@@ -1,0 +1,64 @@
+@import "colors";
+
+body {
+  height: 100vh;
+  margin: auto;
+  background-color: $background-color;
+  font-family: 'Roboto', sans-serif;
+  color: $text-color;
+}
+
+body a {
+  color: $text-highlight-color;
+  text-decoration: none;
+}
+
+body a:visited {
+  color: $text-highlight-color;
+}
+
+.wrapper {
+  display: grid;
+  min-height: 100%;
+  grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+}
+
+.content .main {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+.content .main.post-list {
+  grid-template-rows: 1fr auto;
+  min-height: 100%;
+  display: grid;
+}
+
+.content .main section:first-child {
+  margin-top: 15px;
+}
+
+.content .main .highlight {
+  width: min-content;
+}
+
+.content .main .highlight pre {
+  padding: 5px;
+}
+
+.content .main hr:last-child {
+  display: none;
+}
+
+.post a h3 {
+  font-weight: 400;
+}
+
+.post .read-more {
+  margin: 15px;
+}
+
+.post {
+  margin-bottom: 25px
+}

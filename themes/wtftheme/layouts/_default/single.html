@@ -1,0 +1,11 @@
+{{define "main"}}
+<div class="main">
+    {{with .Title}}
+    <h2>{{.}}</h2>
+    {{end}}
+
+    {{with .Content}}
+    <article>{{.}}</article>
+    {{end}}
+</div>
+{{end}}

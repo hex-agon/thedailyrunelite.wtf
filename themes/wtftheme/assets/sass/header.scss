@@ -1,0 +1,17 @@
+@import "colors";
+
+header {
+  padding: 5px 5px 5px 15px;
+  background-color: $background-color-secondary;
+}
+
+header .inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+}

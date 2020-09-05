@@ -1,0 +1,11 @@
+@import "colors";
+
+footer {
+  padding: 25px;
+  background-color: $background-color-secondary;
+}
+
+footer .inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}

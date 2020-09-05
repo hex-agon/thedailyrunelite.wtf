@@ -1,0 +1,6 @@
+baseURL = "https://dailyrunelite.wtf/"
+languageCode = "en-us"
+title = "The Daily Runelite Wtf"
+theme = "wtftheme"
+
+paginate = 10

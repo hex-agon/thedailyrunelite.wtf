@@ -1,0 +1,15 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{$page_title := ""}}
+    {{if not .IsHome}}
+    {{$page_title =  delimit (slice "|" .Title) " "}}
+    {{end}}
+    {{$title := delimit (slice site.Title $page_title) " "}}
+    <title>{{$title}}</title>
+
+    {{ $sass := resources.Get "sass/main.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>

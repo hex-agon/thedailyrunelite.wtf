@@ -1,0 +1,24 @@
+@import "colors";
+
+.paginator {
+  text-align: center;
+}
+
+.paginator ul {
+  padding: 0;
+  color: $text-highlight-color;
+  list-style-type: none;
+}
+
+.paginator ul li {
+  display: inline-block;
+}
+
+.paginator .page-item {
+  font-size: 22px;
+  padding: 0 5px;
+}
+
+.paginator .page-item.active {
+  border: 1px solid $text-highlight-color;
+}
